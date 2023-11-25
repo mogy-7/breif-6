@@ -26,7 +26,7 @@ if(!$resurlt){
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="cssjs/css/bootstrap.css">
     <title>Banck</title>
 </head>
 
@@ -60,9 +60,9 @@ if(!$resurlt){
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
-    <script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
-    <script src="bootstrap-4.0.0-dist/js/jquery-3.7.1.min.js"></script>
-    <script src="bootstrap-4.0.0-dist/js/popper.min.js"></script>
+    <script src="cssjs/js/bootstrap.js"></script>
+    <script src="cssjs/js/jquery-3.7.1.min.js"></script>
+    <script src="cssjs/js/popper.min.js"></script>
 </body>
 
 </html>
