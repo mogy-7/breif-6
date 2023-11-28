@@ -1,8 +1,8 @@
 <?php
 
 include 'connect.php';
-// Start the session
 // session_start();
+// Start the session;
 
 
 

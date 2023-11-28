@@ -52,7 +52,7 @@ include 'header.php';
                         <td>' . $role_id .'</td>
                         <td>' . $address_id .'</td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
-                        <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'">Delete</a></button>
+                        <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'&deletname='."user".'">Delete</a></button>
                         </td>
                     </tr>
                     

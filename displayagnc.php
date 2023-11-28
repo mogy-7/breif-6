@@ -53,7 +53,7 @@ include 'header.php';
                         <td>' . $bank_id .'</td>
                         <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
-                        <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'">Delete</a></button>
+                        <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'&deletname='."agence".'">Delete</a></button>
                         </td>
                     </tr>
                     

@@ -3,12 +3,13 @@
 include 'connect.php';
 
 if(isset($_GET['deletid'])){
+    $item = $_GET['deletname'];
     $id = $_GET['deletid'];
-    $sql = "DELETE FROM `users` WHERE id=$id";
+    $sql = "DELETE FROM `$item` WHERE id=$id";
 
-    $result= mysqli_query($conn, $sql);
+    $result= mysqli_query($con, $sql);
     if($result){
-        header('location:display.php');
+        header('location:displaybanc.php');
     }else {
         echo " does not deleted secssusfully ";
     }
