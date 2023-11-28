@@ -1,6 +1,12 @@
 <?php
 include 'connect.php';
-?>
+include 'header.php';
+
+// $sql = "    SELECT * FROM account";
+// $result = $con->query($sql);
+
+// $row = $result->fetch_assoc();
+// ?>
 
 
 <!DOCTYPE html>
@@ -20,31 +26,31 @@ include 'connect.php';
         <table class="table ">
             <thead>
                 <tr>
-                    <th scope="col">sl no</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Email</th>
-                    <th scope="col">Mobile Number</th>
-                    <th scope="col">password</th>
-                    <th scope="col">operations=========</th>
+                    <th scope="col">id</th>
+                    <th scope="col">rib</th>
+                    <th scope="col">devise</th>
+                    <th scope="col">balance</th>
+                    <th scope="col">user id</th>
+                    <th scope="col">operations .</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `users`";
-                $result = mysqli_query($conn, $sql);
+                $sql = "SELECT * FROM `account`";
+                $result = mysqli_query($con, $sql);
                 if($result){
                     while($row  = mysqli_fetch_assoc($result)){
                         $id = $row['id'];
-                        $name = $row['name'];
-                        $email = $row['email'];
-                        $mobile = $row['mobile'];
-                        $password = $row['password'];
+                        $rib = $row['rib'];
+                        $devise = $row['devise'];
+                        $balance = $row['balance'];
+                        $user_id = $row['user_id'];
                         echo '<tr>
                         <td>' . $id .'</td>
-                        <th scope="row">' . $name .'</th>
-                        <td>' . $email .'</td>
-                        <td>' . $mobile .'</td>
-                        <td>' . $password .'</td>
+                        <th scope="row">' . $rib .'</th>
+                        <td>' . $devise .'</td>
+                        <td>' . $balance .'</td>
+                        <td>' . $user_id .'</td>
                         <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
                         <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'">Delete</a></button>
@@ -57,28 +63,13 @@ include 'connect.php';
                 }
                 
                 ?>
-
-
-                <!-- <tr>
-                    <th scope="row">2</th>
-                    <td>Jacob</td>
-                    <td>Thornton</td>
-                    <td>@fat</td>
-                </tr>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Larry</td>
-                    <td>the Bird</td>
-                    <td>@twitter</td>
-                </tr> -->
             </tbody>
         </table>
     </div>
 
-
-
-
     </div>
+    <?php include 'footer.php'; ?>
+
     <script src="bootstrap-4.0.0-dist/js/bootstrap.js"></script>
     <script src="bootstrap-4.0.0-dist/js/jquery-3.7.1.min.js"></script>
     <script src="bootstrap-4.0.0-dist/js/popper.min.js"></script>
