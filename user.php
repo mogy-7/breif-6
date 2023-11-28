@@ -1,9 +1,10 @@
 <?php
 include 'connect.php';
+include 'header.php';
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $password = $_POST['quartier'];
+    $password = password_hash($_POST['quartier'], PASSWORD_BCRYPT);
     $role_id = $_POST['rue'];
     $address_id = $_POST['code_postal'];
 
@@ -59,6 +60,8 @@ if(!$resurlt){
             </div>
         </form>
     </div>
+    <?php include 'footer.php'; ?>
+
     <script src="cssjs/js/bootstrap.js"></script>
     <script src="cssjs/js/jquery-3.7.1.min.js"></script>
     <script src="cssjs/js/popper.min.js"></script>

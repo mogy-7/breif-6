@@ -1,5 +1,7 @@
 <?php
 include 'connect.php';
+include 'header.php';
+
 
 if (isset($_POST['submit'])) {
     $ville = $_POST['vile'];
@@ -70,6 +72,8 @@ if(!$resurlt){
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
+
+    <?php include 'footer.php'; ?>
     <script src="cssjs/js/bootstrap.js"></script>
     <script src="cssjs/js/jquery-3.7.1.min.js"></script>
     <script src="cssjs/js/popper.min.js"></script>
