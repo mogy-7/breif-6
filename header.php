@@ -1,3 +1,26 @@
+<?php
+include 'login.php';
+
+
+// If the user clicks the logout button
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['logout'])) {
+
+    // Check if the user is logged in
+if (!isset($_SESSION['user_id'])) {
+    // If not logged in, redirect to the login page
+    header("Location: loginpage.php");
+    exit();
+}
+    // Destroy the session and redirect to the login page
+    session_destroy();
+    header("Location: loginpage.php");
+    exit();
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +35,7 @@
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <a class="navbar-brand" href="index.php">Bank Name</a>
+        <a class="navbar-brand" href="index.php">Lbanak Liya</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -26,13 +49,18 @@
                     <a class="nav-link" href="displaybanc.php">Bank</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="displayacc.php">Accounts</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link" href="displayagnc.php">agences</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="displaydistr.php">distributeur</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="displayacc.php">Accounts</a>
+                </li>
+                <li class="nav-item">
+                    <form method="post">
+                        <button type="submit" class="btn btn-link nav-link" name="logout">Logout</button>
+                    </form>
                 </li>
             </ul>
         </div>
@@ -48,3 +76,7 @@
 </body>
 
 </html>
+
+<?php
+include 'login.php';
+?>
