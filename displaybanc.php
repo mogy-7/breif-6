@@ -22,16 +22,16 @@ include 'header.php';
 <body>
 
     <div class="container">
-        <button class="btn btn-primary mt-5 mb-5"><a class="text-light" href="index.php">add user</a></button>
+        <button class="btn btn-primary mt-5 mb-5"><a class="text-light" href="banc.php">add bank</a></button>
         <table class="table ">
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">rib</th>
-                    <th scope="col">devise</th>
-                    <th scope="col">balance</th>
-                    <th scope="col">user id</th>
-                    <th scope="col">operations .</th>
+                    <th scope="col">name</th>
+                    <th scope="col">bank_logo .</th>
+                    <th scope="col">Update </th>
+                    <th scope="col"> Delete </th>
+
                 </tr>
             </thead>
             <tbody>
@@ -49,6 +49,8 @@ include 'header.php';
                         <td>' . $bank_logo .'</td>
                         <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
+                        </td>
+                        <td>
                         <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'">Delete</a></button>
                         </td>
                     </tr>

@@ -22,32 +22,35 @@ include 'header.php';
 <body>
 
     <div class="container">
-        <button class="btn btn-primary mt-5 mb-5"><a class="text-light" href="index.php">add user</a></button>
+        <button class="btn btn-primary mt-5 mb-5"><a class="text-light" href="distributeur.php">add
+                distributeur</a></button>
         <table class="table ">
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">rib</th>
-                    <th scope="col">devise</th>
-                    <th scope="col">balance</th>
-                    <th scope="col">user id</th>
-                    <th scope="col">operations .</th>
+                    <th scope="col">bank id</th>
+                    <th scope="col">longitude</th>
+                    <th scope="col">latitude</th>
+                    <th scope="col">agence id</th>
+                    <th scope="col">Update Delete .</th>
                 </tr>
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `agence`";
+                $sql = "SELECT * FROM `distributeur`";
                 $result = mysqli_query($con, $sql);
                 if($result){
                     while($row  = mysqli_fetch_assoc($result)){
                         $id = $row['id'];
-                        $longitude = $row['bank_name'];
+                        $bank_id = $row['bank_id'];
+                        $longitude = $row['longitude'];
                         $latitude = $row['latitude'];
                         $agence_id = $row['agence_id'];
                         echo '<tr>
                         <td>' . $id .'</td>
-                        <th scope="row">' . $bank_name .'</th>
+                        <th scope="row">' . $longitude .'</th>
                         <td>' . $latitude .'</td>
+                        <td>' . $bank_id .'</td>
                         <td>' . $agence_id .'</td>
                         <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
