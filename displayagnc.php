@@ -42,13 +42,15 @@ include 'header.php';
                     while($row  = mysqli_fetch_assoc($result)){
                         $id = $row['id'];
                         $bank_name = $row['bank_name'];
-                        $longitude = $row['bank_logo'];
+                        $longitude = $row['longitude'];
                         $latitude = $row['latitude'];
                         $bank_id = $row['bank_id'];
                         echo '<tr>
                         <td>' . $id .'</td>
                         <th scope="row">' . $bank_name .'</th>
-                        <td>' . $bank_logo .'</td>
+                        <td>' . $longitude .'</td>
+                        <td>' . $latitude .'</td>
+                        <td>' . $bank_id .'</td>
                         <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
                         <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'">Delete</a></button>

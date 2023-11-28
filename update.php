@@ -1,5 +1,6 @@
 <?php
 include 'connect.php';
+include 'header.php';
 
 $id = $_GET['updateid'];
 
