@@ -4,9 +4,9 @@ include 'header.php';
 
 if (isset($_POST['submit'])) {
     $username = $_POST['username'];
-    $password = password_hash($_POST['quartier'], PASSWORD_BCRYPT);
-    $role_id = $_POST['rue'];
-    $address_id = $_POST['code_postal'];
+    $password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    $role_id = $_POST['role_id'];
+    $address_id = $_POST['address_id'];
 
     $sql = "INSERT INTO `user` ( username,	password,	role_id, address_id)
 VALUES ('$username' ,'$password' ,'$role_id' ,'$address_id')";

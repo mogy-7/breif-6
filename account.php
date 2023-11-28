@@ -1,5 +1,6 @@
 <?php
 include 'connect.php';
+include 'header.php';
 
 if (isset($_POST['submit'])) {
     $rib = $_POST['rib'];
@@ -40,11 +41,11 @@ if(!$resurlt){
                     placeholder="Enter your rib" name="rib">
             </div>
             <!-- <div class="form-group"> -->
-            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+            <select name="devise" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                 <option>Open this select menu</option>
-                <option name="devise" value="DH">DH</option>
-                <option name="devise" value="Euro">euro</option>
-                <option name="devise" value="dolar">dolar</option>
+                <option value="DH">DH</option>
+                <option value="dolar">dolar</option>
+                <option value="Euro">euro</option>
             </select>
             <!-- </div> -->
             <div class="form-group">
@@ -60,6 +61,8 @@ if(!$resurlt){
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
+    <?php include 'footer.php'; ?>
+
     <script src="cssjs/js/bootstrap.js"></script>
     <script src="cssjs/js/jquery-3.7.1.min.js"></script>
     <script src="cssjs/js/popper.min.js"></script>
