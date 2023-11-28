@@ -27,11 +27,10 @@ include 'header.php';
             <thead>
                 <tr>
                     <th scope="col">id</th>
-                    <th scope="col">rib</th>
-                    <th scope="col">devise</th>
-                    <th scope="col">balance</th>
-                    <th scope="col">user id</th>
-                    <th scope="col">operations .</th>
+                    <th scope="col">username</th>
+                    <th scope="col">password</th>
+                    <th scope="col">role_id</th>
+                    <th scope="col">address_id</th>
                 </tr>
             </thead>
             <tbody>
@@ -51,11 +50,11 @@ include 'header.php';
                         <td>' . $password .'</td>
                         <td>' . $role_id .'</td>
                         <td>' . $address_id .'</td>
+                        <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
                         <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'&deletname='."user".'">Delete</a></button>
                         </td>
-                    </tr>
-                    
+                        </tr>
                         ';
                     };
                 

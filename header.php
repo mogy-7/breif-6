@@ -58,6 +58,9 @@ if (!isset($_SESSION['user_id'])) {
                     <a class="nav-link" href="displayacc.php">Accounts</a>
                 </li>
                 <li class="nav-item">
+                    <a class="nav-link" href="displayusr.php">user</a>
+                </li>
+                <li class="nav-item">
                     <form method="post">
                         <button type="submit" class="btn btn-link nav-link" name="logout">Logout</button>
                     </form>

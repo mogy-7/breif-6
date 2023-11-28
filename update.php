@@ -5,7 +5,7 @@ include 'header.php';
 $id = $_GET['updateid'];
 
 $sql = "SELECT * FROM `users` WHERE id=$id ";
-$resurlt = mysqli_query($conn, $sql);
+$resurlt = mysqli_query($con, $sql);
 $row = mysqli_fetch_assoc($resurlt);
 $name = $row['name'];
 $email = $row['email'];
@@ -20,7 +20,7 @@ if (isset($_POST['submit'])) {
     $password = $_POST['password'];
 
     $id = $_GET['updateid'];
-    $sql = "UPDATE `users` SET id = $id, name = '$name', email = '$email', mobile = '$mobile', password = '$password'
+    $sql = "UPDATE `user` SET id = $id, name = '$username', role_id = '$role_id', address_id = '$address_id', password = '$password'
     WHERE id = $id";
 $resurlt = mysqli_query($conn,$sql);
 if(!$resurlt){

@@ -2,11 +2,7 @@
 include 'connect.php';
 include 'header.php';
 
-// $sql = "    SELECT * FROM account";
-// $result = $con->query($sql);
-
-// $row = $result->fetch_assoc();
-// ?>
+ ?>
 
 
 <!DOCTYPE html>
@@ -53,7 +49,7 @@ include 'header.php';
                         <td>' . $user_id .'</td>
                         <td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
-                        <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'&deletname='."bank".'">Delete</a></button>
+                        <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'&deletname='."account".'">Delete</a></button>
                         </td>
                     </tr>
                     
