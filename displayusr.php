@@ -36,20 +36,21 @@ include 'header.php';
             </thead>
             <tbody>
                 <?php
-                $sql = "SELECT * FROM `agence`";
+                $sql = "SELECT * FROM `user`";
                 $result = mysqli_query($con, $sql);
                 if($result){
                     while($row  = mysqli_fetch_assoc($result)){
                         $id = $row['id'];
-                        $longitude = $row['bank_name'];
-                        $latitude = $row['latitude'];
-                        $agence_id = $row['agence_id'];
+                        $username = $row['username'];
+                        $password = $row['password'];
+                        $role_id = $row['role_id'];
+                        $address_id = $row['address_id'];
                         echo '<tr>
                         <td>' . $id .'</td>
-                        <th scope="row">' . $bank_name .'</th>
-                        <td>' . $latitude .'</td>
-                        <td>' . $agence_id .'</td>
-                        <td>
+                        <th scope="row">' . $username .'</th>
+                        <td>' . $password .'</td>
+                        <td>' . $role_id .'</td>
+                        <td>' . $address_id .'</td>
                         <button  class="btn btn-primary"><a class="text-light" href="update.php?updateid='.$id.'">Update</a></button>
                         <button  class="btn btn-danger"><a class="text-light" href="delete.php?deletid='.$id.'">Delete</a></button>
                         </td>

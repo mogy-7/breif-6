@@ -1,5 +1,7 @@
 <?php
 include 'connect.php';
+include 'header.php';
+
 
 if (isset($_POST['submit'])) {
     $name = $_POST['name'];
@@ -39,12 +41,13 @@ if(!$resurlt){
             </div>
             <div class="form-group">
                 <label for="exampleInputPassword1">bank_logo</label>
-                <input type="number" class="form-control" id="exampleInputPassword1"
+                <input type="text" class="form-control" id="exampleInputPassword1"
                     placeholder="enter your lien of your bank logo" name="bank_logo">
             </div>
             <button type="submit" class="btn btn-primary" name="submit">Submit</button>
         </form>
     </div>
+    <?php include 'footer.php'; ?>
     <script src="cssjs/js/bootstrap.js"></script>
     <script src="cssjs/js/jquery-3.7.1.min.js"></script>
     <script src="cssjs/js/popper.min.js"></script>

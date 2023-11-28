@@ -1,8 +1,9 @@
 <?php
 include 'connect.php';
+include 'header.php';
 
 if (isset($_POST['submit'])) {
-    $bank_id = $_POST['bank_name'];
+    $bank_id = $_POST['bank_id'];
     $longitude = $_POST['longitude'];
     $latitude = $_POST['latitude'];
     $agence_id = $_POST['agence_id'];
@@ -59,6 +60,7 @@ if(!$resurlt){
             </div>
         </form>
     </div>
+    <?php  include 'footer.php'; ?>
     <script src="cssjs/js/bootstrap.js"></script>
     <script src="cssjs/js/jquery-3.7.1.min.js"></script>
     <script src="cssjs/js/popper.min.js"></script>
